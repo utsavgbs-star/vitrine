@@ -67,7 +67,7 @@ jobs:
           path: out/extension
           key: extension-${{ steps.spotify.outputs.version }}-${{ hashFiles('extension/LiveActivity/**', 'tweak/Sources/Shared/LiveActivity/**', 'scripts/build-extension.sh') }}
 
-      - run: make release
+      - run: make release PIXIE=1
 
       - run: ccache --show-stats
 
